@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ADHD</title>
+    <meta name="description" content="Mental Healh in AD-HD">
+    <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
+    <script src="https://npmcdn.com/aframe-animation-component@3.0.1"></script>
+    <script src="https://npmcdn.com/aframe-event-set-component@3.0.1"></script>
+    <script src="https://npmcdn.com/aframe-layout-component@3.0.1"></script>
+    <script src="https://npmcdn.com/aframe-template-component@3.1.1"></script>
+    <script src="set-image.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <img id="default" crossorigin="anonymous" src="https://cdn.glitch.com/45a55869-f9c5-445f-8dd0-a6077ceea375%2Flearnervariability-360vid-header.jpg?v=1561229441616">
+
+      </a-assets>
+      
+      <a-sky id="image-360-background" src="#default" rotation="0 130 0" radius="10"></a-sky>
+      
+<a-entity sound = "src: url(https://cdn.glitch.com/45a55869-f9c5-445f-8dd0-a6077ceea375%2FWhiteboard%20Marker.mp3?v=1561233304144) ; autoplay: true" />
+<a-entity sound = "src: url(https://cdn.glitch.com/45a55869-f9c5-445f-8dd0-a6077ceea375%2FADHD.mp3?v=1561236337866) ; autoplay: true" />
+      
+      <a-entity id="welcome" position="0.15 0 0">
+        <a-text value="Mental Health" color="#111" position="-5 3 -3" align="center" scale="3 3 3"></a-text>
+        <a-text value="ADHD" color="#ce1616" position="-5 3 -4" align="center" scale="3 3 3" font="exo2bold"></a-text>
+      </a-entity>
+      
+     
+      
+      <a-camera position="0 0 0">
+        <a-cursor
+          material="color: #fff; shader: flat"
+          id="cursor" 
+          raycaster="far: 20; objects: .clickable" 
+          event-set__1="_event: mouseenter; scale: 2 2 2; color: #ce1616;" 
+          event-set__2="_event: mouseleave; scale: 1 1 1; color: #fff;">
+        </a-cursor>
+      </a-camera>
+    </a-scene>
+  </body>
+</html>
